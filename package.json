@@ -39,7 +39,7 @@
     "package.json"
   ],
   "dependencies": {
-    "firebase": "^5.5.4",
+    "firebase": "^7.14.3",
     "jsdom": ">3"
   },
   "devDependencies": {
