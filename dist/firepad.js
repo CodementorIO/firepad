@@ -1567,7 +1567,8 @@ firepad.FirebaseAdapter = (function (global) {
   };
 
   FirebaseAdapter.prototype.handleInitialRevisions_ = function() {
-    assert(!this.ready_, "Should not be called multiple times.");
+    // This warning occurs in Next.js 13, but it does not affect the functionality of the editor.
+    if(this.ready_) return console.warn('Should not be called multiple times.');
 
     // Compose the checkpoint and all subsequent revisions into a single operation to apply at once.
     this.revision_ = this.checkpointRevision_;
